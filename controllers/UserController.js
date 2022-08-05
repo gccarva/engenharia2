@@ -1,4 +1,7 @@
-const IRoutes = require('./IUserController.js');
+const IUserController = require('./IUserController.js');
+
+const mongoose = require('mongoose');
+const User = require('../models/User');
 
 class UserController extends IUserController{
   constructor(){

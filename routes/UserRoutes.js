@@ -10,7 +10,9 @@ const app = express();
 
 
 const config = require('../config.js');
-let IUserController = require('../controllers/'+config.IUserController);
+let UserController = require('../controllers/'+config.IUserController);
+
+let userController = new UserController();
 
 
 
@@ -31,13 +33,13 @@ app.use(express.static('public'));
       app.get('/', (req, res) => {
       res.send('Rest API com Polimorfismo');
       });
-      app.get('/user', IUserController.show);
+      app.get('/user', userController.show);
 // lista user, filtrando por email
 // ex: /user/buscaemail/?email=vaguetti@gmail.com
 //=========================
   }
   post(){
-    app.post('/user', IUserController.store);
+    app.post('/user', userController.store);
 // lista user
   }
 

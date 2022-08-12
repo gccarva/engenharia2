@@ -1,7 +1,6 @@
 const IUserController = require('./IUserController.js');
 
-const mongoose = require('mongoose');
-//const User = require('../persistencelayer/models/User');
+
 const config = require('../config.js');
 const UserDAO = require('../persistencelayer/dao/'+config.IUserDAO);
 let userdao = new UserDAO();

@@ -1,41 +1,42 @@
 const IUserController = require('./IUserController.js');
 
 const mongoose = require('mongoose');
-const User = require('../models/User');
+//const User = require('../persistencelayer/models/User');
+const config = require('../config.js');
+const UserDAO = require('../persistencelayer/dao/'+config.IUserDAO);
+let userdao = new UserDAO();
 
 class UserController extends IUserController{
   constructor(){
     super();
        
   }
-  async index(req,res)
-    {
-        let users = await User.find(
-          { email : req.query.email}
-                                   );
-        return res.json(users);
-    }
+
+  
   async show(req, res)
     {
-        let users = await User.find();
+  
+       let users = await userdao.recovery();
         return res.json(users);
     }
   async store(req, res)
      {
-        const user =  await User.create(req.body);
-
+        const user =  await userdao.create(req);
         return res.json(user);
      }
    async destroy(req,res){
-      let user = await 
-     User.findByIdAndRemove(req.params.id);
+         let user = await userdao.delete(req);
          return res.json(user);
     }
    async update(req,res){
-        let user = await 
-      User.findByIdAndUpdate(req.params.id,req.body, 
-       {new:true}); 
+        let user = await userdao.update(req);
         return res.json(user);
+    }
+
+   async index(req,res)
+    {
+        let users = await userdao.search(req);
+        return res.json(users);
     }
   
 }

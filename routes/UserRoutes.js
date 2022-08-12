@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 //================================
-const mongoose = require('mongoose');
+
 var cors = require('cors');
 
 const IRoutes = require('./IRoutes.js');
@@ -20,10 +20,7 @@ class UserRoutes extends IRoutes{
 
   constructor() {   
     super();
-    mongoose.connect('mongodb+srv://vaguetti:dwm20221@cluster0.004qy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{
-     useNewUrlParser: true,
-     useUnifiedTopology: true
-});
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));  
@@ -34,6 +31,9 @@ app.use(express.static('public'));
       res.send('Rest API com Polimorfismo');
       });
       app.get('/user', userController.show);
+
+      app.get('/user/search', userController.index)
+      
 // lista user, filtrando por email
 // ex: /user/buscaemail/?email=vaguetti@gmail.com
 //=========================

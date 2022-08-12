@@ -6,5 +6,6 @@ class IUserController{
     store(){}
     destroy(){}
     update(){}
+    search(){}
 }
 module.exports = IUserController;

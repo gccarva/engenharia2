@@ -35,7 +35,7 @@ app.use(express.static('public'));
       app.get('/user/search', userController.index)
       
 // lista user, filtrando por email
-// ex: /user/buscaemail/?email=vaguetti@gmail.com
+// ex: /user/search/?email=vaguetti@gmail.com
 //=========================
   }
   post(){

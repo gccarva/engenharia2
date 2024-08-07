@@ -8,7 +8,7 @@ const User = require('../models/User');
 class UserDAO_Mongoose extends IUserDAO{
 
    constructor(){ super();
-  mongoose.connect('mongodb+srv://vaguetti:dwm20221@cluster0.004qy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{
+  mongoose.connect('mongodb+srv://leandrovaguetti:engsoft2@poli.ihq71yz.mongodb.net/?retryWrites=true&w=majority',{
      useNewUrlParser: true,
      useUnifiedTopology: true
 });
@@ -21,7 +21,9 @@ class UserDAO_Mongoose extends IUserDAO{
      async recovery(){ 
           let users = await User.find();
           return users; 
-         }
+         }controllers
+   persistencelayer
+   routes
      async update(req){
        let user = await User.findByIdAndUpdate(req.params.id,req.body, 
        {new:true});

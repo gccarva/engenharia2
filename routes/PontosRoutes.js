@@ -27,7 +27,6 @@ class PontosRoutes extends IRoutes {
   } // finaliza construtor
 
   get() {
-    app.get('/pontos/top', (req, res) => pontosController.top(req, res));
     app.get('/pontos/user', (req, res) => pontosController.getbyuser(req, res));
 
 

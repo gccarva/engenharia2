@@ -36,7 +36,7 @@ class TemasRoutes extends IRoutes {
     //=========================
   }
   post() {
-    app.post('/fotos/create', (req, res) => temasController.create(req, res));
+    app.post('/temas/create', (req, res) => temasController.create(req, res));
     // lista user
   }
 

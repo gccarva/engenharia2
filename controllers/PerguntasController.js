@@ -9,13 +9,13 @@ class PerguntasController extends IPerguntasController {
   constructor() {
     super();
   }
-  async getperguntabytemas(req, res) {
+  async getall(req, res) {
     let perguntas = await perguntasDAO.search(req);
     return res.json(perguntas);
   }
   async create(req, res){
     let pergunta = await perguntasDAO.create(req);
-    return res.json(ponto);
+    return res.json(pergunta);
   }
 }
-module.exports = pergunta;
+module.exports = PerguntasController;

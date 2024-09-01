@@ -1,11 +1,8 @@
 class IFotosController {
 
    constructor() { }
-   index() { }
-   show() { }
-   store() { }
-   destroy() { }
-   update() { }
-   search() { }
+   getall() { }
+   create() { }
+
 }
 module.exports = IFotosController;

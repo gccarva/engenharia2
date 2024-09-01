@@ -6,8 +6,16 @@ const UsuarioSchema = new mongoose.Schema(
             email: String,
             password: String,
             descricao: String,
-            fotolink: String
+            fotolink: String,
+            pontuacaos: [{
+                  type: mongoose.Schema.Types.ObjectId,
+                  ref: 'Pontuacaos'
+            }],
+            pontos: [{
+                  type: mongoose.Schema.Types.ObjectId,
+                  ref: 'Pontos'
+            }]
       }
 );
 
-module.exports = mongoose.model('Usuario', UsuarioSchema);
+module.exports = mongoose.model('Usuarios', UsuarioSchema);

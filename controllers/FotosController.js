@@ -9,9 +9,9 @@ class FotosController extends IFotosController {
   constructor() {
     super();
   }
-  async getfotosbydinossauro(req, res) {
-    let foto = await fotosdao.getfotosbydinossauro(req);
-    return res.json(foto);
+  async getall(req, res) {
+    let fotos = await fotosdao.getall(req);
+    return res.json(fotos);
   }
   async create(req, res){
     let foto = await fotosdao.create(req);

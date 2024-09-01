@@ -1,11 +1,7 @@
 class IPontosController {
 
    constructor() { }
-   index() { }
-   show() { }
-   store() { }
-   destroy() { }
-   update() { }
-   search() { }
+   create() { }
+
 }
 module.exports = IPontosController;

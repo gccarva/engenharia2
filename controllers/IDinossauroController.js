@@ -1,11 +1,9 @@
-class IDinossaurController{
+class IDinossaurController {
 
-   constructor(){}
-    index(){}
-    show(){}
-    store(){}
-    destroy(){}
-    update(){}
-    search(){}
+   constructor() { }
+   findall() { }
+   create() { }
+   findbyid() { }
+   addfoto() { }
 }
 module.exports = IDinossaurController;

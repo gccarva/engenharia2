@@ -37,6 +37,8 @@ class UsuarioRoutes extends IRoutes {
   }
   post() {
     app.post('/user/create', (req, res) => userController.create(req, res));
+    app.post('/user/gainpontos', (req, res) => userController.addpontos(req, res));
+    app.post('/user/addpergunta', (req, res) => userController.addpergunta(req, res));
     // lista user
   }
 

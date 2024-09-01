@@ -26,4 +26,4 @@ class DinossauroController extends IDinossoaurController {
     return res.json(dino);
   }
 }
-module.exports = FotosController;
+module.exports = DinossauroController;

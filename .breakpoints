@@ -1,0 +1,18 @@
+{
+  "files": {
+    "persistencelayer/models/Perguntas.js": [
+      {
+        "id": "a115b436-a5fb-4f44-b0c2-d93a93ccd6d8",
+        "line": 5,
+        "version": 129,
+        "index": 92
+      },
+      {
+        "id": "cdba7414-a3a2-41d2-a163-e44263d07324",
+        "line": 7,
+        "version": 129,
+        "index": 144
+      }
+    ]
+  }
+}

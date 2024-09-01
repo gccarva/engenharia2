@@ -27,13 +27,10 @@ class PerguntasRoutes extends IRoutes {
   } // finaliza construtor
 
   get() {
-    app.get('/perguntas/temas', (req, res) => perguntasController.getperguntabytemas(req, res));
-
-
-
     // lista user, filtrando por email
     // ex: /user/search/?email=vaguetti@gmail.com
     //=========================
+     app.get('/perguntas/getall', (req, res) => perguntasController.getall(req, res));
   }
   post() {
     app.post('/perguntas/create', (req, res) => perguntasController.create(req, res));

@@ -27,13 +27,10 @@ class TemasRoutes extends IRoutes {
   } // finaliza construtor
 
   get() {
-    app.get('/temas/perguntas', (req, res) => temasController.gettemasbyperguntas(req, res));
-
-
-
     // lista user, filtrando por email
     // ex: /user/search/?email=vaguetti@gmail.com
     //=========================
+    app.get('/temas/getall', (req, res) => temasController.getall(req, res));
   }
   post() {
     app.post('/temas/create', (req, res) => temasController.create(req, res));

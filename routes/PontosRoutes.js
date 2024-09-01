@@ -27,15 +27,13 @@ class PontosRoutes extends IRoutes {
   } // finaliza construtor
 
   get() {
-    app.get('/pontos/user', (req, res) => pontosController.getbyuser(req, res));
-
-
     // lista user, filtrando por email
     // ex: /user/search/?email=vaguetti@gmail.com
     //=========================
+    app.get('/pontos/getall', (req, res) => pontosController.getall(req, res));
   }
   post() {
-    app.post('/pontos/gain', (req, res) => pontosController.create(req, res));
+    app.post('/pontos/create', (req, res) => pontosController.create(req, res));
     // lista user
   }
 

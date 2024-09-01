@@ -27,13 +27,10 @@ class FotosRoutes extends IRoutes {
   } // finaliza construtor
 
   get() {
-    app.get('/fotos/dinossauro', (req, res) => fotosController.getfotosbydinossauro(req, res));
-
-
-
     // lista user, filtrando por email
     // ex: /user/search/?email=vaguetti@gmail.com
     //=========================
+     app.get('/fotos/getall', (req, res) => fotosController.getall(req, res));
   }
   post() {
     app.post('/fotos/create', (req, res) => fotosController.create(req, res));

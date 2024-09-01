@@ -9,12 +9,12 @@ class PontosController extends IPontosController {
   constructor() {
     super();
   }
-  async getbyuser(req, res) {
-    let pontos = await pontosDAO.search(req);
-    return res.json(pontos);
-  }
   async create(req, res){
     let ponto = await pontosDAO.create(req);
+    return res.json(ponto);
+  }
+  async getall(req, res){
+    let ponto = await pontosDAO.getall(req);
     return res.json(ponto);
   }
 }

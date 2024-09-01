@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const Temaschema = new mongoose.Schema(
       {
             tema: String,
-            perguntas: [String]
       }
 );
 

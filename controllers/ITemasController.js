@@ -1,11 +1,7 @@
 class ITemasController {
 
    constructor() { }
-   index() { }
-   show() { }
-   store() { }
-   destroy() { }
-   update() { }
-   search() { }
+   getall() { }
+   create() { }
 }
 module.exports = ITemasController;

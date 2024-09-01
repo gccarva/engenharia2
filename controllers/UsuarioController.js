@@ -17,5 +17,13 @@ class UsuarioController extends IUsuarioController {
     let user = await usuarioDAO.create(req);
     return res.json(user);
   }
+  async addpontos(req, res) {
+    let user = await usuarioDAO.addpontos(req);
+    return res.json(user);
+  }
+  async addpergunta(req, res) {
+    let user = await usuarioDAO.addpergunta(req);
+    return res.json(user);
+  }
 }
 module.exports = UsuarioController;

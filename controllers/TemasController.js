@@ -9,8 +9,8 @@ class TemasController extends ITemasController {
   constructor() {
     super();
   }
-  async gettemasbyperguntas(req, res) {
-    let temas = await temasDAO.search(req);
+  async getall(req, res) {
+    let temas = await temasDAO.getall(req);
     return res.json(temas);
   }
   async create(req, res){

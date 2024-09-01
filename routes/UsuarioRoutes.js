@@ -6,8 +6,6 @@ var cors = require('cors');
 
 const IRoutes = require('./IRoutes.js');
 
-const app = express();
-
 
 const config = require('../config.js');
 let UsuarioController = require('../controllers/' + config.IUsuarioController);
@@ -26,7 +24,7 @@ class UsuarioRoutes extends IRoutes {
     app.use(express.static('public'));
   } // finaliza construtor
 
-  get() {
+  get(app) {
     app.get('/user/login', (req, res) => usuarioController.login(req, res));
 
 
@@ -35,16 +33,13 @@ class UsuarioRoutes extends IRoutes {
     // ex: /user/search/?email=vaguetti@gmail.com
     //=========================
   }
-  post() {
+  post(app) {
     app.post('/user/create', (req, res) => userController.create(req, res));
     app.post('/user/gainpontos', (req, res) => userController.addpontos(req, res));
     app.post('/user/addpergunta', (req, res) => userController.addpergunta(req, res));
     // lista user
   }
 
-  listen() {
-    app.listen(3000, () => console.log('server started'));
-  }
 
 }
 module.exports = UsuarioRoutes;

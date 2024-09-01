@@ -37,9 +37,6 @@ class PontosRoutes extends IRoutes {
     // lista user
   }
 
-  listen() {
-    app.listen(3000, () => console.log('server started'));
-  }
 
 }
 module.exports = PontosRoutes;

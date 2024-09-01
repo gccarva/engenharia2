@@ -43,9 +43,6 @@ class DinossauroRoutes extends IRoutes {
     // lista user
   }
 
-  listen() {
-    app.listen(3000, () => console.log('server started'));
-  }
 
 }
 module.exports = DinossauroRoutes;

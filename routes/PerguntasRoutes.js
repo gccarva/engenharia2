@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 //================================
 
-var cors = require('cors');
 
 const IRoutes = require('./IRoutes.js');
 
@@ -35,10 +34,6 @@ class PerguntasRoutes extends IRoutes {
   post() {
     app.post('/perguntas/create', (req, res) => perguntasController.create(req, res));
     // lista user
-  }
-
-  listen() {
-    app.listen(3000, () => console.log('server started'));
   }
 
 }

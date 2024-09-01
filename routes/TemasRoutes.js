@@ -26,20 +26,17 @@ class TemasRoutes extends IRoutes {
     app.use(express.static('public'));
   } // finaliza construtor
 
-  get() {
+  get(app) {
     // lista user, filtrando por email
     // ex: /user/search/?email=vaguetti@gmail.com
     //=========================
     app.get('/temas/getall', (req, res) => temasController.getall(req, res));
   }
-  post() {
+  post(app) {
     app.post('/temas/create', (req, res) => temasController.create(req, res));
     // lista user
   }
 
-  listen() {
-    app.listen(3000, () => console.log('server started'));
-  }
 
 }
 module.exports = TemasRoutes;

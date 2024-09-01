@@ -27,10 +27,10 @@ class DinossauroRoutes extends IRoutes {
   } // finaliza construtor
 
   get() {
-    app.get('/dinossauro/:id', (req, res) => {
-      dinossauroController.findbyid(req.params.id, res);
+    app.get('/dinossauro/findbyid', (req, res) => {
+      dinossauroController.findbyid(req, res);
     });
-    app.get('/dinossauro', (req, res) => dinossauroController.findall(req, res));
+    app.get('/dinossauro/findall', (req, res) => dinossauroController.findall(req, res));
 
 
     // lista user, filtrando por email

@@ -1,11 +1,9 @@
-class IUsuarioController{
+class IUsuarioController {
 
-   constructor(){}
-    index(){}
-    show(){}
-    store(){}
-    destroy(){}
-    update(){}
-    search(){}
+   constructor() { }
+   creat() { }
+   login() { }
+   addpontos() { }
+   addperguntas() { }
 }
 module.exports = IUsuarioController;

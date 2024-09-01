@@ -20,7 +20,7 @@ class UsuarioDAO_Mongoose extends IDinossauroDAO {
   async findbyid(req) {
     let dinossauro = await Dinossauro.find(
       {
-        _id: req.query.id,
+        _id: req.body.id,
       }
     );
     return dinossauro;
@@ -30,7 +30,7 @@ class UsuarioDAO_Mongoose extends IDinossauroDAO {
     return dinossauros;
   }
   async addfoto(req) {
-    const dinossauro = await Dinossauro.findById(req.query.id);
+    const dinossauro = await Dinossauro.findById(req.body.id);
 
     if (!dinossauro) {
       console.log('Dinossauro não encontrado');

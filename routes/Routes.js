@@ -10,13 +10,13 @@ const app = express();
 
 
 const config = require('../config.js');
-let UsuarioRoutes = require('./' + config.UsuarioRoutes);
-let TemasRoutes = require('./' + config.TemasRoutes);
-let FotosRoutes = require('./' + config.FotosRoutes);
+let UsuarioRoutes = require('./' + config.IUsuarioRoutes);
+let TemasRoutes = require('./' + config.ITemasRoutes);
+let FotosRoutes = require('./' + config.IFotosRoutes);
 
-let DinossaurosRoutes = require('./' + config.DinossaurosRoutes);
-let PerguntasRoutes = require('./' + config.DinossaurosRoutes);
-let PontosRoutes = require('./' + config.DinossaurosRoutes);
+let DinossaurosRoutes = require('./' + config.IDinossaurosRoutes);
+let PerguntasRoutes = require('./' + config.IDinossaurosRoutes);
+let PontosRoutes = require('./' + config.IDinossaurosRoutes);
 class Routes extends IRoutes {
 
   constructor() {

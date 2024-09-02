@@ -7,7 +7,7 @@ const config = {
   
   "IUsuarioController": "UsuarioController.js",
   "IUsuarioDAO" : "UsuarioDAO.js",
-  "UsuarioRoutes": "UsuarioRoutes.js",
+  "IUsuarioRoutes": "UsuarioRoutes.js",
   
   "ITemasRoutes" : "TemasRoutes.js",
   "ITemasController":"TemasController.js",

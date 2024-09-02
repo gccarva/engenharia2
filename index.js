@@ -1,6 +1,5 @@
 const config = require('./config.js');
 let IRoutes = require('./routes/'+config.IRoutes);
-let userRoutes = new IRoutes();
-    userRoutes.get();  // subir as rotas de get
-    userRoutes.post(); // subir as rotas de post
-    userRoutes.listen(); // subir o backend
+let allRoutes = new IRoutes();  // subir as rotas de get
+    allRoutes.createroutes() // subir as rotas de post
+    allRoutes.listen(); // subir o backend
